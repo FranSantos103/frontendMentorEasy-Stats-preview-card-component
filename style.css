@@ -1,0 +1,270 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+} 
+
+@font-face {
+    font-family: 'Inter_18pt-Medium';
+    src: url(assets/fonts/Inter/static/Inter_18pt-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Inter_18pt-Regular';
+    src: url(assets/fonts/Inter/static/Inter_18pt-Light.ttf);
+}
+
+@font-face {
+    font-family: 'LexendDeca-Light';
+    src: url(assets/fonts/Lexend/static/LexendDeca-Light.ttf);
+}
+ 
+body{
+    height: 100dvh;
+    background-color: hsl(233, 47%, 7%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    background-color: hsl(244, 37%, 16%);
+    width: 900px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    flex: 1.1;
+}
+
+h1{
+    color: white;
+    width: 70%;
+    font-family: 'Inter_18pt-Medium';
+    margin-left: 10%;
+    margin-top: 15%;
+}
+
+.insights{
+    color: #aa5bdc;
+}
+
+.cardDescription{
+    color: white;
+    margin-left: 10%;
+    margin-top: 5%;
+    font-family:'LexendDeca-Light';
+    color: hsla(0, 0%, 100%, 0.6);
+    width: 75%;
+    line-height: 25px;
+    font-size: 0.9em;
+}
+
+.stats{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10%;
+    width: 80%;
+    margin-bottom: 10%;
+}
+
+.statItem{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    line-height: 25px;
+}
+
+.statValue{
+    font-family: 'Inter_18pt-Medium';
+    font-size: 1.3em;
+}
+
+.statLabel{
+    font-family: 'Inter_18pt-Regular'; 
+    font-size: 0.6em ;
+    font-weight: bold ;
+    letter-spacing: 0.2em;
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.cardImage {
+  flex: 1.08;            
+  position: relative;     
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;     
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;  
+  filter: brightness(0.9);
+}
+
+.cardImage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: hsl(277, 64%, 61%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+@media (max-width: 450px) {
+main{
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 8px;
+    height: 95svh;
+}
+
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+}
+
+h1{
+    color: white;
+    width: 90%;
+    font-family: 'Inter_18pt-Medium';
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.cardDescription{
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    font-family:'LexendDeca-Light';
+    color: hsla(0, 0%, 100%, 0.6);
+    width: 70%;
+    line-height: 25px;
+    font-size: 0.9em;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1%;
+    margin-top: 4%;
+}
+
+.statItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;  
+}
+
+.cardImage{       
+  position: relative;     
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  overflow: hidden;     
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;     
+  object-position: top;   
+}
+
+}
+
+@media (max-width: 330px){
+    
+main{
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 8px;
+    height: 95vh;
+}
+
+.cardContent{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+}
+
+h1{
+    color: white;
+    width: 55%;
+    font-family: 'Inter_18pt-Medium';
+    font-size: 1em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.cardDescription{
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    font-family:'LexendDeca-Light';
+    color: hsla(0, 0%, 100%, 0.6);
+    width: 65%;
+    line-height: 18px;
+    font-size: 0.6em;
+}
+
+.stats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.statItem{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    line-height: 20px;
+}
+
+.statValue{
+    font-size: 0.9em;
+}
+
+.statLabel{
+    font-size: 0.5em;
+}
+
+.cardImage{       
+  position: relative;     
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  overflow: hidden;     
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;     
+  object-position: top;   
+}
+}
